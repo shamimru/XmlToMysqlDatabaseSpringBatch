@@ -81,21 +81,21 @@ public class XmlBatchConfig {
 	    }
 
 	    // Rest of the code remains the same...
-	    @Bean
-	    public WritableResource outputResource() {
-	        return new FileSystemResource("/path/to/output.xml");
-	    }
+//	    @Bean
+//	    public WritableResource outputResource() {
+//	        return new FileSystemResource("/Users/shamim_ahamed/Documents/html/persons (1).xml");
+//	    }
 
-	    @Bean
-	    public StaxEventItemWriter<Person> itemWriter(WritableResource outputResource) {
-	        return new StaxEventItemWriterBuilder<Person>()
-	                .marshaller(PersonMarshaller())
-	                .resource(outputResource)
-	                .rootTagName("person")
-	                .name("personWriter")  
-	                .overwriteOutput(true)
-	                .build();
-	    }
+//	    @Bean
+//	    public StaxEventItemWriter<Person> itemWriter(WritableResource outputResource) {
+//	        return new StaxEventItemWriterBuilder<Person>()
+//	                .marshaller(PersonMarshaller())
+//	                .resource(outputResource)
+//	                .rootTagName("person")
+//	                .name("personWriter")  
+//	                .overwriteOutput(true)
+//	                .build();
+//	    }
 
 	    @Bean
 	    public ItemProcessor<Person, Person> processor() {
